@@ -1,0 +1,11 @@
+### Apple Intermediate Certificates - UNTRUSTED/REVOKED
+
+# Expires: Tuesday, 12 June 2029 at 01:59:59 Central European Summer Time
+# note: GeoTrust Root CA
+Apple IST CA 4 - G1;Apple;skid;A273E75C3ED33FCD7688703568B341A5ABE900AF
+Apple IST CA 4 - G1;Apple;sha1;C90F5CD1E59E2472C8568C887F6E80FE420174B3
+
+# Expires: Friday, 20 May 2022 at 17:42:43 Central European Summer Time
+# note: GeoTrust Root CA
+Apple IST CA 5 - G1;Apple;skid;5633902F9DF4D230D00D622513781D21A751120F
+Apple IST CA 5 - G1;Apple;sha1;29AD8CCA30DF26812327493BE48F4846D6473FE3

@@ -1,0 +1,78 @@
+### truSTW Intermediate Certificates
+
+# Expires: Saturday, 2 September 2051 at 01:59:59 Central European Summer Time
+Braun Developer ID Certification Authority;JossBrown;skid;D575CAE6A49523FC3AEC8A10A0552107789A57A2
+Braun Developer ID Certification Authority;JossBrown;sha1;CE6595A3CD97612EAA1839FC086F2DF0BBD1F6C0
+
+# Expires: Saturday, 2 September 2051 at 01:59:59 Central European Summer Time
+Braun ID Certification Authority;JossBrown;skid;5BA2CFEDE47A020903ECF83AEE5A8340670BEB0F
+Braun ID Certification Authority;JossBrown;sha1;D10D8A8C63A5ADB66C68909E009E924AAAF34061
+
+### Apple Intermediate Certificates - VALID
+# see here for Apple's current CAs & iCAs: https://www.apple.com/certificateauthority/
+
+# Expires: Monday, 9 June 2031 at 01:59:59 Central European Summer Time
+Apple IST CA 8 - G1;Apple;skid;C3C4A4580563D78306BA968DDCB28F32F6BBB741
+Apple IST CA 8 - G1;Apple;sha1;F2F440AB16D7CAE39E73270E97266DFF15606EC0
+
+# Expires: Monday, 7 May 2029 at 01:46:30 Central European Summer Time
+Apple Application Integration CA - G3;Apple;skid;23F249C44F93E4EF27E6C4F6286C3FA2BBFD2E4B
+Apple Application Integration CA - G3;Apple;sha1;232C8D374B1DBA958F9017077F021168AC58EBC3
+
+# Expires: Monday, 7 May 2029 at 01:43:24 Central European Summer Time
+Apple Worldwide Developer Relations CA - G2;Apple;skid;84B684CC3A866272165994E81AA3BD48DF3ADF0B
+Apple Worldwide Developer Relations CA - G2;Apple;sha1;F300CB8FDC809FCAF8777A262F369C5FDC190767
+
+# Expires: Wednesday, 24 May 2028 at 19:43:37 Central European Summer Time
+Apple Application Integration 2 Certification Authority;Apple;skid;F7BE7C216091DB3D1B7BD83A328169DF9E6C7F9B
+Apple Application Integration 2 Certification Authority;Apple;sha1;569CC1DB34D6577AA8D7E725A9A8CA71839A2B3C
+
+# Expires: Saturday, 29 April 2028 at 20:40:54 Central European Summer Time
+Developer Authentication Certification Authority;Apple;skid;49F63609B81B23FA035BB6EA82A0D95D10186706
+Developer Authentication Certification Authority;Apple;sha1;7B47A04FEB6DF5DBF0B94CAB13752E8CCE4DB981
+
+# Expires: Monday, 5 April 2027 at 14:02:44 Central European Summer Time
+Apple Timestamp Certification Authority;Apple;skid;34CD254ECDDE378538A15826F8F9E229DEF21C93
+Apple Timestamp Certification Authority;Apple;sha1;E637BF7E6F451B9B2AC2AF4C0BCA8BD6D03773DE
+
+# Expires: Monday, 1 February 2027 at 23:12:15 Central European Standard Time
+Developer ID Certification Authority;Apple;skid;5717EDA2CFDC7C98A110E0FCBE872D2CF2E31754
+Developer ID Certification Authority;Apple;sha1;3B166C3B7DC4B751C9FE2AFAB9135641E388E186
+
+# Expires: Saturday, 24 October 2026 at 19:39:41 Central European Summer Time
+Apple Code Signing Certification Authority;Apple;skid;8E69A6C477424E04A556429C511F86DAD2208F09
+Apple Code Signing Certification Authority;Apple;sha1;1D010078A61F4FA4694AFF4DB1AC266CE1B45946
+
+# Expires: Wednesday, 21 October 2026 at 02:00:00 Central European Summer Time
+Apple Application Integration Certification Authority;Apple;skid;31EA76A92374A5DFD4FDEEA0C1A69EC6110E11EC
+Apple Application Integration Certification Authority;Apple;sha1;F6BE3A02D876EC1F96C6CA983934FF14EEA99409
+
+# Expires: Tuesday, 7 February 2023 at 22:48:47 Central European Standard Time
+Apple Worldwide Developer Relations Certification Authority;Apple;skid;88271709A9B618608BECEBBAF64759C55254A3B7
+Apple Worldwide Developer Relations Certification Authority;Apple;sha1;FF6797793A3CD798DC5B2ABEF56F73EDC9F83A64
+
+# Expires: Friday, 20 May 2022 at 17:42:02 Central European Summer Time
+Apple IST CA 2 - G1;Apple;skid;D87A94447C907090169EDD179C01440386D62A29
+Apple IST CA 2 - G1;Apple;sha1;8E8321CA08B08E3726FE1D82996884EEB5F0D655
+
+### Apple Intermediate Certificates - EXPIRED
+
+# Expired: Thursday, 24 October 2019 at 19:29:17 Central European Summer Time
+Apple Software Update Certification Authority;Apple;skid;8BC5294AF3AFCAA17294F7066D476341B0479821
+Apple Software Update Certification Authority;Apple;sha1;FA02790FCE9D930089C8C2510BBC50B4858E6FBF
+
+# Expired: Wednesday, 26 July 2017 at 21:16:09 Central European Summer Time
+Apple Application Integration Certification Authority;Apple;skid;31EA76A92374A5DFD4FDEEA0C1A69EC6110E11EC
+Apple Application Integration Certification Authority;Apple;sha1;0F663C38B1DD9D177CD65B19CF2314049016E5CE
+
+# Expired: Thursday, 26 May 2016 at 22:38:27 Central European Summer Time
+Apple .Mac Certificate Authority;Apple;skid;7A7D90B13059089291F953B9711D353367348BD5
+Apple .Mac Certificate Authority;Apple;sha1;07B61B7FE42AD38C4CE7BBD3F2B55A36872D2B13
+
+# Expired: Sunday, 14 February 2016 at 19:56:35 Central European Standard Time
+Apple Worldwide Developer Relations Certification Authority;Apple;skid;88271709A9B618608BECEBBAF64759C55254A3B7
+Apple Worldwide Developer Relations Certification Authority;Apple;sha1;0950B6CD3D2F37EA246A1AAA20DFAADBD6FE1F75
+
+# Expired: Saturday, 14 February 2015 at 22:03:54 Central European Standard Time
+Apple Software Update Certification Authority;Apple;skid;8BC5294AF3AFCAA17294F7066D476341B0479821
+Apple Software Update Certification Authority;Apple;sha1;9C86477148B3D704247A3C3F56EA2DE5944B01C2

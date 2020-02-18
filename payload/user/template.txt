@@ -1,0 +1,42 @@
+### truSTW user template
+# v2.0.0 RC1
+
+### general format
+# <common name>;<display name>;<method>;<value>
+
+### mandatory format
+# semicolon-delimited
+# one certificate per line
+# add a leading hash to disable, or to add comments
+# omit the leading hash to enable
+# omit whitespaces and colons from values
+
+### glossary
+# common name: the X.509 v3 commonName (CN) of the signing certificate
+# display name: user-defined name for the certificate for display/notifications in/by truSTW
+
+### methods
+# fp: certificate's fingerprint (SHA-2 256)
+# sha1: certificate's fingerprint (SHA-1)
+# skid: certificate's subject key identifier
+# id: Team ID of a valid Apple-issued certificate, i.e. the X.509 v3 organizationalUnitName (OU)
+
+### values
+# fp: SHA-2 256 fingerprint, e.g. 8BEAFE8668FBE54A6CE43084AD1CFF35AF2A0851DC6D4028C06570AA7FD3F13C
+# sha1: SHA-1 fingerprint, e.g. 8197DB385D17D626E36B17D68E398083447C34CE
+# skid: subject key identifier of SHA-1 length, e.g. D1CC1414E11480527EECC3D3C944F8BFB1931574
+# id: Team ID of a valid Apple-issued certificate, i.e. the X.509 v3 organizationalUnitName (OU), e.g. DX17P5V08Z
+
+### examples
+# BibDesk Signing Certificate;BibDesk;fp;5753DF6F379135065DC735BEAEA0DBE82326E1CF18E221B9F492525CF8A98456
+# Christian Hohnstaedt;xca;skid;2073E8ADAC6B98A4DAC2929C431ED71A03994C13
+# Fraunhofer-Ges. zur Foerderung der angewandten Forschung e.V.;Fraunhofer;skid;CDC966FEE8418BFA1310BEEFE0B43F8AB67C0123
+# Skim Signing Certificate;Skim;fp;90CB02800E6869E71F6DEF3BD512F8882AB6540527770B88EBB469129A165E78
+
+### notes
+# you can extract certificate information incl. all available hashes from the truSTW GUI ('Extract Signing Information…')
+# you can also use the 'certx' shell script distributed together with truSTW
+# information will be extracted to the 'certx' subfolder in truSTW's application support directory in the user library
+# you can add certificate information in the 'user' subfolder of truSTW's application support directories
+# best practice for maximum security is to apply this in the global library's support directory, while keeping file ownerships set to root:wheel
+# if you don't have an administrator account, apply this in the user library's support directory instead

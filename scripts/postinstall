@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# postinstall script for truSTW pkg installers
+# v0.1
+
+support_dir="/Library/Application Support/truSTW"
+
+xattr -cr "$support_dir" 2>/dev/null
+xattr -xw com.apple.FinderInfo 0000000000000000000400000000000000000000000000000000000000000000 "$support_dir/user/whitelists" 2>/dev/null
+xattr -xw com.apple.FinderInfo 0000000000000000000E00000000000000000000000000000000000000000000 "$support_dir/user/graylists" 2>/dev/null
+xattr -xw com.apple.FinderInfo 0000000000000000000C00000000000000000000000000000000000000000000 "$support_dir/user/blacklists" 2>/dev/null
+
+read -d '' tag_xml <<"EOF"
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>truSTW user configuration</string>
+</array>
+</plist>
+EOF
+tag_binary=$(echo "$tag_xml" | plutil -convert binary1 - -o - | xxd -p -c 256 -u)
+xattr -xw com.apple.metadata:_kMDItemUserTags "$tag_binary" "$support_dir/user" 2>/dev/null
+
+chown -R root:wheel "$support_dir" 2>/dev/null
+chmod -R 0775 "$support_dir" 2>/dev/null
+
+uid=$(cat /tmp/truSTW.temp 2>/dev/null)
+if [[ $uid != "-" ]] ; then
+	apploc=$(mdfind "kMDItemCFBundleIdentifier == 'local.lcars.truSTW'" 2>/dev/null | LC_COLLATE=C sort | awk 'NR==1')
+	[[ $apploc ]] && launchctl asuser $uid open "$apploc" 2>/dev/null
+fi
+rm -f /tmp/truSTW.temp 2>/dev/null
+
+exit 0
