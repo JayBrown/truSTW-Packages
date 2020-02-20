@@ -23,7 +23,7 @@ tag_binary=$(echo "$tag_xml" | plutil -convert binary1 - -o - | xxd -p -c 256 -u
 xattr -xw com.apple.metadata:_kMDItemUserTags "$tag_binary" "$support_dir/user" 2>/dev/null
 
 chown -R root:wheel "$support_dir" 2>/dev/null
-chmod -R 0775 "$support_dir" 2>/dev/null
+chmod -R 0644 "$support_dir" 2>/dev/null
 
 uid=$(cat /tmp/truSTW.temp 2>/dev/null)
 if [[ $uid != "-" ]] ; then
