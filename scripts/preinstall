@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # preinstall script for truSTW pkg installers
-# v0.1
+# v0.2
 
 rm -f /tmp/truSTW.temp 2>/dev/null
 pid=$(pgrep -l truSTW | awk '{print $1}')
 if [[ "$pid" ]] ; then
-	uid=$(ps -p "$pid" -o uid | grep -v "UID" | xargs)
+	unm=$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }')
+	uid=$(id -u "$unm")
 	if [[ $uid ]] ; then
 		echo -n "$uid" > /tmp/truSTW.temp 2>/dev/null
 	else
@@ -22,14 +23,14 @@ else
 	echo -n "-" > /tmp/truSTW.temp 2>/dev/null
 fi
 
-read -d '' target_dirs <<"EOF"
+read -dr '' target_dirs <<"EOF"
 /Library/Application Support/truSTW/authorities
 /Library/Application Support/truSTW/intermediates
 /Library/Application Support/truSTW/identities
 /Library/Application Support/truSTW/user
 EOF
 
-read -d '' sub_dirs <<"EOF"
+read -dr '' sub_dirs <<"EOF"
 whitelists
 graylists
 blacklists
@@ -37,7 +38,7 @@ EOF
 
 support_dir="/Library/Application Support/truSTW"
 if ! [[ -d "$support_dir" ]] ; then
-	rm -rf "$support_dir" 2>/dev/null
+	rm -rf "${support_dir:?}" 2>/dev/null
 	while read -r target_dir
 	do
 		mkdir -p "$target_dir/whitelists" 2>/dev/null
@@ -48,7 +49,7 @@ else
 	while read -r target_dir
 	do
 		if ! [[ -d "$target_dir" ]] ; then
-			rm -rf "$target_dir" 2>/dev/null
+			rm -rf "${target_dir:?}" 2>/dev/null
 			mkdir -p "$target_dir/whitelists" 2>/dev/null
 			mkdir "$target_dir/graylists" 2>/dev/null
 			mkdir "$target_dir/blacklists" 2>/dev/null
@@ -56,7 +57,7 @@ else
 			while read -r sub_dir
 			do
 			if ! [[ -d "$target_dir/$sub_dir" ]] ; then
-				rm -rf "$target_dir/$sub_dir" 2>/dev/null
+				rm -rf "${target_dir:?}/$sub_dir" 2>/dev/null
 				mkdir "$target_dir/$sub_dir" 2>/dev/null
 			fi
 			done < <(echo "$sub_dirs" | grep -v "^$")
@@ -65,10 +66,10 @@ else
 fi
 while read -r target_dir
 do
-	rm -f "$target_dir/whitelists/initial" 2>/dev/null
-	rm -f "$target_dir/graylists/initial" 2>/dev/null
-	rm -f "$target_dir/blacklists/initial" 2>/dev/null
+	rm -f "${target_dir:?}/whitelists/initial" 2>/dev/null
+	rm -f "${target_dir:?}/graylists/initial" 2>/dev/null
+	rm -f "${target_dir:?}/blacklists/initial" 2>/dev/null
 done < <(echo "$target_dirs" | grep -v -e "^$" -e "/truSTW/user$")
-rm -f "$support_dir/user/template.txt" 2>/dev/null
+rm -f "${support_dir:?}/user/template.txt" 2>/dev/null
 
 exit 0
